@@ -1,0 +1,9 @@
+<%= link_to 'Add link', new_link_path %>
+
+<section>
+	<% if @links.any? %>
+		<%= render @links %>
+	<%else%>
+		<span class='no_link'> No links yet</span>
+	<% end %>
+</section>
