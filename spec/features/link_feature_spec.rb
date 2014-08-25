@@ -8,11 +8,17 @@ describe 'links' do
 		end 
 	end 
 
+
+before do 
+	hannah = create(:user)
+	login_as hannah
+end
+
 	context 'creating a link' do 
 		it 'should not save the link if the url is not valid' do 
 			visit '/'
 			click_link 'Add link'
-			link = create(:link)
+			link = Link.new(title: 'Hello', url: 'hello', comment: 'hello')
 			click_button 'Create link'
 			expect(page).not_to have_content('Hello')
 		end 

@@ -9,6 +9,12 @@ describe 'posts' do
 	end 
 
 	context 'when there are posts' do 
+
+		before do
+			hannah = create(:user)
+			login_as hannah
+		end 
+
 		it 'should display the posts' do 
 			visit '/posts'
 			click_link 'Add post' 
