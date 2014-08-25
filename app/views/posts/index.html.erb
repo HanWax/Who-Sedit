@@ -1,0 +1,9 @@
+<%= link_to 'Add post', new_post_path %>
+
+<section>
+	<% if @posts.any? %>
+		<%= render @posts %>
+	<%else%>
+		<span class='no_post'> No posts yet</span>
+	<% end %>
+</section>
