@@ -1,5 +1,5 @@
 <% if @links.any? %>
-		<%= @links.each do |link| %>
+		<% @links.each do |link| %>
 		<h2><%= link_to link.title, link.url %></h2>
 		<h2><%= link.comment %></h2>
 		<% end %>

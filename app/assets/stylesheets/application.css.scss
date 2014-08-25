@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-inverse {
+background-color: #193441;
+border-color: #193441;
+}
+
+.btn-success {
+color: #3E606F;
+background-color: #91AA9D;
+border-color: #91AA9D;
+}
+
+.jumbotron {
+padding-top: 48px;
+padding-bottom: 48px;
+background-color: #3E606F;
+margin-bottom: 0px;
+}
+
+body {
+	color: #D1DBBD;
+}
+
+.yield {
+	margin-bottom: 600px;
+}

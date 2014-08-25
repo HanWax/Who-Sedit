@@ -1,0 +1,17 @@
+<section class='container col-md-4'>
+<% if @posts.any?%>
+
+		<% @posts.each do |post| %>
+			<h2><%= post.title %></h2>
+			<h3><%= post.content %></h3>
+
+		<% end %>
+<% end %>
+
+<% if @links.any?%>
+		<% @links.each do |link| %>
+			<h2><%= link_to link.title, link.url %></h2>
+			<h3><%= link.comment %></h3>
+		<% end %>
+<% end %>
+</section>

@@ -10,7 +10,7 @@ describe 'links' do
 
 	context 'creating a link' do 
 		it 'should not save the link if the url is not valid' do 
-			visit '/links'
+			visit '/'
 			click_link 'Add link'
 			link = create(:link)
 			click_button 'Create link'
@@ -18,11 +18,11 @@ describe 'links' do
 		end 
 
 		it 'should save the link if the url is valid' do 
-			visit '/links'
+			visit '/'
 			click_link 'Add link'
 			link = create(:link)
 			click_button 'Create link'
-			expect(page).to have_content('https://www.google.com')
+			expect(page).to have_content('Google')
 		end 
 	end 
 end 
